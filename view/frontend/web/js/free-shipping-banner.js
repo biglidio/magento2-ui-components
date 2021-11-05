@@ -1,14 +1,19 @@
 define([
-    'uiComponent'
+    'uiComponent',
+    'ko'
 ], function(
-    Component
+    Component,
+    ko
 ) {
     'use strict';
 
     return Component.extend({
         defaults: {
             subtotal: 33.00,
-            template: "Biglidio_FreeShippingPromo/free-shipping-banner"
+            template: "Biglidio_FreeShippingPromo/free-shipping-banner",
+            tracks: {
+                subtotal: true
+            }
         },
         initialize: function() {
             this._super();
