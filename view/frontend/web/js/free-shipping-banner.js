@@ -7,7 +7,6 @@ define([
 
     return Component.extend({
         defaults: {
-            message: "Free Shipping Message" + "!",
             template: "Biglidio_FreeShippingPromo/free-shipping-banner"
         },
         initialize: function() {
