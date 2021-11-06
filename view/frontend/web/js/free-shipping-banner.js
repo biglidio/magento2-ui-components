@@ -26,10 +26,17 @@ define([
             var cart = customerData.get('cart');
 
             customerData.getInitCustomerData().done(function() {
-                if (!_.isEmpty(cart()) && !_.isUndefined(cart(cart().subtotalAmount))) {
+                if (!_.isEmpty(cart()) && !_.isUndefined(cart().subtotalAmount)) {
                     self.subtotal = parseFloat(cart().subtotalAmount);
                 }
             });
+
+            cart.subscribe(cart => {
+                if (!_.isEmpty(cart) && !_.isUndefined(cart.subtotalAmount)) {
+                    self.subtotal = parseFloat(cart.subtotalAmount);
+                }
+            });
+
         },
         formatCurrency: function(value) {
             return '$' + value.toFixed(2);
