@@ -11,9 +11,10 @@
                                     <item name="sidebar" xsi:type="array">
                                         <item name="children" xsi:type="array">
                                             <item name="shippingTime" xsi:type="array">
-                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                <item name="component" xsi:type="string">Biglidio_CheckoutMessages/js/view/summary/shipping-time</item>
                                                 <item name="config" xsi:type="array">
                                                     <item name="template" xsi:type="string">Biglidio_CheckoutMessages/summary/shipping-time</item>
+                                                    <item name="displayArea" xsi:type="string">shipping-time</item>
                                                 </item>
                                             </item>
                                         </item>
