@@ -15,6 +15,10 @@ define([
                 'checkoutProvider:shippingAddress.region_id': 'handleRegionChange'
             }
         },
+        initialize: function() {
+            this._super();
+            console.log(this.name + ' is initialized.');
+        },
         showMessage: function() {
             return this.countryId === 'US';
         },
