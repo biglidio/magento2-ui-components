@@ -19,7 +19,7 @@ define([
             return this.countryId === 'US';
         },
         handleRegionChange: function(newRegionId) {
-            console.log('New Region ID ' + newRegionId);
+            // console.log('New Region ID ' + newRegionId);
         }
     });
 });
