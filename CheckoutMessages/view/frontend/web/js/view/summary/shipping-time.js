@@ -7,12 +7,14 @@ define([
 
     return Component.extend({
         defaults: {
+            //Example of dynamic properties
+            '${ $.name }ShippingAddressProvider': '${ $.name }AddressProvider',
             tracks: {
                 countryId: true
             },
             listens: {
-                'checkoutProvider:shippingAddress.country_id': 'countryId',
-                'checkoutProvider:shippingAddress.region_id': 'handleRegionChange'
+                '${ $.shippingAddressProvider }.country_id': 'countryId',
+                '${ $.shippingAddressProvider }.region_id': 'handleRegionChange'
             }
         },
         initialize: function() {
