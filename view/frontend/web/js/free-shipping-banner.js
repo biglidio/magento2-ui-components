@@ -13,9 +13,11 @@ define([
 
     return Component.extend({
         defaults: {
+            message: '${ $.messageDefault }',
             subtotal: 0.00,
             template: "Biglidio_FreeShippingPromo/free-shipping-banner",
             tracks: {
+                message: true,
                 subtotal: true
             }
         },
@@ -36,7 +38,7 @@ define([
                     self.subtotal = parseFloat(cart.subtotalAmount);
                 }
             });
-
+            
         },
         formatCurrency: function(value) {
             return '$' + value.toFixed(2);
