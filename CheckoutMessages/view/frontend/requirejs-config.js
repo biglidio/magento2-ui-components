@@ -5,5 +5,10 @@ var config = {
                 'Biglidio_CheckoutMessages/js/view/summary/cart-items-mixin': true
             }
         }
+    },
+    map: {
+        '*': {
+            'Magento_Checkout/template/sidebar': 'Biglidio_CheckoutMessages/template/sidebar'
+        }
     }
 }
